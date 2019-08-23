@@ -13,9 +13,9 @@ Write a table describing your test cases.
 | one item               |  list with 1 item   |
 | one item many times    |  list with 1 item   |
 | 2 items, many times, many orders | 2 item list, items in same order  |
-| empty list             |  empty list         |
-| one item               |  list with 1 item   |
-| one item many times    |  list with 1 item   |
+| list in list            |  1 list = 1 item so return normal item     |
+| different type               |  each type = 1 item so return normal item   |
+| value is not list    |  ValueError   |
 
 ## Test Cases for Fraction     
 
