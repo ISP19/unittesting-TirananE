@@ -79,7 +79,7 @@ class Fraction:
         denominator = denominator/number_of_gcd
         return Fraction(numerator,denominator)
 
-    def __div__(self, frac):
+    def __truediv__(self, frac):
         """Return the sum of two fractions as a new fraction.
            Use the standard formula  (a/b) / (c/d) = (a*d)/(b*c)
         """
@@ -111,10 +111,3 @@ class Fraction:
             return "0/0"
         else:
             return f"{int(self.numerator)}/{int(self.denominator)}"
-
-f = Fraction(6,8)
-g = Fraction(2,8)
-print(g)
-sum = f+g
-print(sum)
-print(Fraction(0)*Fraction(18,27))
