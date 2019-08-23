@@ -1,4 +1,4 @@
-def unique(list):
+def unique(lst1):
     """Return a list containing only the first occurence of each distint
        element in list.  That is, all duplicates are omitted.
 
@@ -14,10 +14,20 @@ def unique(list):
     ["b","a"]
     >>> unique([])
     []
+    >>> unique([2,2,2,3,3,2,3,3])
+    [2, 3]
     """
-    pass   # remove this and write the actual code
+    lst2 = []
+    if not(isinstance(lst1, list)):
+        raise ValueError
+    for i in lst1:
+        if i not in lst2:
+            lst2.append(i)
+    return lst2
 
 if __name__ == "__main__":
     """Run the doctests in all methods."""
     import doctest
     doctest.testmod(verbose=True)
+
+

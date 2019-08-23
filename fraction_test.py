@@ -25,6 +25,8 @@ class FractionTest(unittest.TestCase):
         # Constructor should provide default denominator = 1
         f = Fraction(99)
         self.assertEqual("99", f.__str__())
+        f = Fraction(0,0)
+        self.assertEqual("0/0", f.__str__())
 
     # TODO Write tests for __init__, __eq__, +, *.
     # Here is an example, but you must add more test cases.  
@@ -32,7 +34,36 @@ class FractionTest(unittest.TestCase):
     def test_add(self):
         # 3/4 = 2/3 + 1/12
         self.assertEqual(Fraction(3,4), Fraction(1,12)+Fraction(2,3))
+        self.assertEqual(Fraction(-1,5),Fraction(-3,5)+Fraction(2,5))
+        self.assertEqual(Fraction(-1),Fraction(-2,5)+Fraction(-3,5))
+        self.assertEqual(Fraction(-1),Fraction(2,-5)+Fraction(3,-5))
+        self.assertEqual(Fraction(1,10),Fraction(8,100)+Fraction(2,100))
+        self.assertEqual(Fraction(2,3),Fraction(18,27)+Fraction(0))
+        self.assertEqual(Fraction(0),Fraction(0,4)+Fraction(0,-1))
+        self.assertEqual(Fraction(0),Fraction(0)+Fraction(0))
 
+    def test_sub(self):
+        # -1/5 = 2/5 - 3/5
+        self.assertEqual(Fraction(-1,5),Fraction(2,5)-Fraction(3,5))
+        self.assertEqual(Fraction(1,5),Fraction(-2,5)-Fraction(-3,5))
+        self.assertEqual(Fraction(3,50),Fraction(8,100)-Fraction(2,100))
+        self.assertEqual(Fraction(2,3),Fraction(18,27)-Fraction(0))
+        self.assertEqual(Fraction(-2,3),Fraction(0)-Fraction(18,27))
+        self.assertEqual(Fraction(0),Fraction(0,4)-Fraction(0,-1))
+        self.assertEqual(Fraction(0),Fraction(0)-Fraction(0))
+
+    def test_mul(self):
+        # 5/27 = 5/9 * 1/3
+        self.assertEqual(Fraction(0),Fraction(0)*Fraction(0))
+        self.assertEqual(Fraction(0),Fraction(0)*Fraction(18,27))
+        self.assertEqual(Fraction(5,27),Fraction(5,9)*Fraction(1,3))
+        self.assertEqual(Fraction(-8,15),Fraction(2,3)*Fraction(4,-5))
+        self.assertEqual(Fraction(-8,15),Fraction(2,3)*Fraction(4,-5))
+
+    def test_div(self):
+        pass
+
+        
     def test_eq(self):
         f = Fraction(1,2)
         g = Fraction(-40,-80)
