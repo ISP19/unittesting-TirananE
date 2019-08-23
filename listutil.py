@@ -11,11 +11,24 @@ def unique(lst1):
     >>> unique([5])
     [5]
     >>> unique(["b","a","a","b","b","b","a","a"])
-    ["b","a"]
+    ['b', 'a']
     >>> unique([])
     []
     >>> unique([2,2,2,3,3,2,3,3])
     [2, 3]
+    >>> unique([10,20,30,[10,20],[10,20,30]])
+    [10, 20, 30, [10, 20], [10, 20, 30]]
+    >>> unique([50,'grape',['apple','watermelon']])
+    [50, 'grape', ['apple', 'watermelon']]
+    >>> unique("")
+    Traceback (most recent call last):
+      File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/doctest.py", line 1329, in __run
+        compileflags, 1), test.globs)
+      File "<doctest listutil.unique[6]>", line 1, in <module>
+        unique("")
+      File "/Users/tiranan/Desktop/unittesting-TirananE/listutil.py", line 31, in unique
+        raise ValueError
+    ValueError
     """
     lst2 = []
     if not(isinstance(lst1, list)):
@@ -29,5 +42,3 @@ if __name__ == "__main__":
     """Run the doctests in all methods."""
     import doctest
     doctest.testmod(verbose=True)
-
-
