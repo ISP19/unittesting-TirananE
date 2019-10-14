@@ -1,4 +1,5 @@
 ## Unit Testing Assignment
+[![Build Status](https://travis-ci.com/TirananE/unittesting-TirananE.svg?branch=master)](https://travis-ci.com/TirananE/unittesting-TirananE)
 
 by Tiranan Emson.
 
