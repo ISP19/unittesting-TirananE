@@ -1,6 +1,8 @@
 ## Unit Testing Assignment
 [![Build Status](https://travis-ci.com/TirananE/unittesting-TirananE.svg?branch=master)](https://travis-ci.com/TirananE/unittesting-TirananE)
 
+[![codecov](https://codecov.io/gh/TirananE/unittesting-TirananE/branch/master/graph/badge.svg)](https://codecov.io/gh/TirananE/unittesting-TirananE)
+
 by Tiranan Emson.
 
 
